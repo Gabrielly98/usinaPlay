@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'tab-bar',
+    loadChildren: () => import('./components/tab-bar/tab-bar.module').then( m => m.TabBarPageModule)
+  },
 ];
 
 @NgModule({
