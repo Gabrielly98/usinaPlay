@@ -1,17 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');ion-toolbar{
-  height: 300px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
 
 ion-content{
   margin: 0;
   padding: 0;
 }
 
-ion-header{
-  display: flex;
-  flex-wrap: wrap;
-
+ion-toolbar{
+  --background: rgb(39, 39, 39);
 }
+
 .card-cartao {
   border-radius: 20px;
   height: 140px;
@@ -51,19 +48,78 @@ h1{
   font-weight: 600;
   margin: 0;
   position: relative;
-  color: rgb(253, 164, 0);
+  color: rgb(255, 128, 0);
   align-self:flex-start;
 }
 
 .roxo{
-  color: rgb(53, 0, 114);
+  color: rgb(78, 31, 132);
+
+  
 }
  
 .icon{
-  width: 22px;
+  font-size: 22px;
+  color: rgb(255, 128, 0);;
 }
 
+.text-chip{
+  color: rgb(255, 128, 0);;
+}
 
+.buttons-chip{
+  display: flex;
+  position: relative;
+  align-items: center;
+  background-color: rgb(81, 81, 81);
+}
+
+.chip{
+  margin: 0;
+  width: 2px;
+  height: 50px;
+  position: relative;
+}
+
+ion-avatar{
+  width: 80px;
+  height: 80px;
+  margin-left: 60px;
+  margin-right: 8px;
+}
+
+.div-box{
+  display: flex;
+  flex-wrap:nowrap
+}
+
+.p-texto-header{
+  font-size: 26px;
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  margin: 0;
+  padding-top: 12px;
+}
+
+.container-header{
+  height: 200px;
+  background-color: rgb(39, 39, 39);
+  border-radius: 0 0  40px 40px;
+}
+
+.icon-header{
+font-size: 30px;
+margin: auto;
+padding: 8px;
+color: rgb(255, 128, 0);
+}
+
+.item-header{
+  --background: rgb(39, 39, 39);
+  align-items: center;
+  
+}
 
 
 

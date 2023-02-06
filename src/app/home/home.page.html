@@ -1,31 +1,39 @@
 <ion-header>
   <ion-toolbar>
-    <ion-avatar>
-      <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-    </ion-avatar>
-    <ion-title>
-      <p class="p-texto">Leonardo Santos</p>
-      <p class="p-texto roxo">Nivel Roxo</p>
-    </ion-title>
-    
-    <ion-chip>
-      <img class="icon" src="../../assets/icon/Dumbbell.png" alt="">
-      <ion-label>Meu corpo</ion-label>
-    </ion-chip>
-    <ion-chip>
-      <ion-icon name="close-circle"></ion-icon>
-      <ion-label>Objetivos e Conquistas</ion-label>
-    </ion-chip>
+    <ion-icon class="icon-header" slot="start" name="menu-outline"></ion-icon>
+    <img src="" alt="">
+    <ion-icon class="icon-header" slot="end" name="notifications-outline"></ion-icon>
   </ion-toolbar>
 </ion-header>
 
 
 <ion-content [fullscreen]="true">
+  <div class="container-header">
+    <div class="div-box">
+      <ion-avatar>
+        <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+      </ion-avatar>
+      <h1 class="p-texto-header">Leonardo Santos
+        <p class="p-texto roxo">Nivel Roxo</p>
+      </h1>
+    </div>
+    <ion-item class="item-header" lines="none">
+      <ion-chip>
+        <ion-icon class="icon" name="man-outline"></ion-icon>      
+        <ion-label class="text-chip">Meu corpo</ion-label>
+      </ion-chip>
+      <ion-chip>
+        <ion-icon class="icon" name="ribbon-outline"></ion-icon>
+        <ion-label class="text-chip">Objetivos e Conquistas</ion-label>
+      </ion-chip>
+    </ion-item>
+  
+  </div>
   <div class="container-atividades">
-   <ion-item class="ion-no-padding">
-    <ion-icon slot="end" name="add"></ion-icon>
-    <h1 class="ion-text-uppercase">Personal Online</h1>
-   </ion-item>
+    <ion-item class="ion-no-padding">
+      <ion-icon slot="end" name="add"></ion-icon>
+      <h1 class="ion-text-uppercase">Personal Online</h1>
+    </ion-item>
 
     <swiper #swiper [config]="config">
       <ng-template class="teste" swiperSlide>
@@ -54,7 +62,7 @@
         <ion-card class="card-cartao ion-padding" style=" background-image: url('../../assets/image7.png');">
           <p class="ion-text-uppercase p-texto">Yoga</p>
         </ion-card>
-      </ng-template> 
+      </ng-template>
     </swiper>
   </div>
 
@@ -67,8 +75,8 @@
         </ion-card>
       </ng-template>
       <ng-template swiperSlide>
-        <ion-card  class="card-cartao ion-padding">
-         <p class="ion-text-uppercase p-texto">Como aliviar o stress?</p>
+        <ion-card class="card-cartao ion-padding">
+          <p class="ion-text-uppercase p-texto">Como aliviar o stress?</p>
         </ion-card>
       </ng-template>
     </swiper>
