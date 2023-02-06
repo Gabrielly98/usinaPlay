@@ -1,22 +1,78 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
+    <ion-avatar>
+      <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+    </ion-avatar>
     <ion-title>
-      Blank
+      <p class="p-texto">Leonardo Santos</p>
+      <p class="p-texto roxo">Nivel Roxo</p>
     </ion-title>
+    
+    <ion-chip>
+      <img class="icon" src="../../assets/icon/Dumbbell.png" alt="">
+      <ion-label>Meu corpo</ion-label>
+    </ion-chip>
+    <ion-chip>
+      <ion-icon name="close-circle"></ion-icon>
+      <ion-label>Objetivos e Conquistas</ion-label>
+    </ion-chip>
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content [fullscreen]="true">
-  <swiper #swiper [config]="{initialSlide:0}">
-    <ng-template swiperSlide>
-      <ion-card class="card-cartao ion-padding">
-        Treinos
-      </ion-card>
-    </ng-template>
-    <ng-template swiperSlide>
-      <ion-card class="card-cartao ion-padding">
-        Treinos
-      </ion-card>
-    </ng-template>
-  </swiper>
+  <div class="container-atividades">
+   <ion-item class="ion-no-padding">
+    <ion-icon slot="end" name="add"></ion-icon>
+    <h1 class="ion-text-uppercase">Personal Online</h1>
+   </ion-item>
+
+    <swiper #swiper [config]="config">
+      <ng-template class="teste" swiperSlide>
+        <ion-card class="card-cartao ion-padding" style=" background-image: url('../../assets/image2.png');">
+          <p class="ion-text-uppercase p-texto">Novo treino</p>
+        </ion-card>
+      </ng-template>
+      <ng-template swiperSlide>
+        <ion-card class="card-cartao ion-padding" style=" background-image: url('../../assets/image7.png');">
+          <p class="ion-text-uppercase p-texto">Yoga</p>
+        </ion-card>
+      </ng-template>
+    </swiper>
+  </div>
+
+  <div class="container-usinaplay">
+    <h1 class="ion-text-uppercase">Programas</h1>
+    <swiper #swiper [config]="config">
+      <ng-template class="teste" swiperSlide>
+        <ion-card class="card-cartao ion-padding" style=" background-image: url('../../assets/image1.png');">
+          <p class="ion-text-uppercase p-texto-continue">Continuar treinando</p>
+          <p class="ion-text-uppercase p-texto">Levantamento de Peso</p>
+        </ion-card>
+      </ng-template>
+      <ng-template swiperSlide>
+        <ion-card class="card-cartao ion-padding" style=" background-image: url('../../assets/image7.png');">
+          <p class="ion-text-uppercase p-texto">Yoga</p>
+        </ion-card>
+      </ng-template> 
+    </swiper>
+  </div>
+
+  <div class="container-blog">
+    <h1 class="ion-text-uppercase">Conteúdos</h1>
+    <swiper #swiper [config]="config">
+      <ng-template class="teste" swiperSlide>
+        <ion-card class="card-cartao ion-padding">
+          <p class="ion-text-uppercase p-texto">Qualidade de Vida: O que é?</p>
+        </ion-card>
+      </ng-template>
+      <ng-template swiperSlide>
+        <ion-card  class="card-cartao ion-padding">
+         <p class="ion-text-uppercase p-texto">Como aliviar o stress?</p>
+        </ion-card>
+      </ng-template>
+    </swiper>
+  </div>
+
+
 </ion-content>
